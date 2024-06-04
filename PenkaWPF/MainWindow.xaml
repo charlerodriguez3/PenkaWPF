@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PenkaWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Penka App" 
+        Height="600" 
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <Image Grid.Column="1" x:Name="LogoImagen" Source="Resources/Images/Logo.png" Height="auto" Width="auto" Stretch="Uniform" SnapsToDevicePixels="True"/>
+        
+        <StackPanel Grid.Row="1" Grid.Column="1" Width="auto" Height="auto">
+            <Label x:Name="UserLabel" Content="Usuario" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource Subtitle1 }" />
+            <TextBox x:Name="UserText" Text="" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,5" Style="{StaticResource Textbox1}" />
+            <Label x:Name="PasswordLabel" Content="Contraseña" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource Subtitle1 }" />
+            <PasswordBox x:Name="PasswordText" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,5" Style="{StaticResource PasswordBox1}" />
+            <Button x:Name="LoginEnviar" Content="Iniciar Sesión" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource Button2}" Click="LoginEnviar_Click"/>
+        </StackPanel>
+        
+        <TextBlock Grid.Row="2" x:Name="DerechosLabel" VerticalAlignment="Bottom" HorizontalAlignment="Left" Style="{StaticResource Text1-1}">
+            Todos los derechos reservados 2024.
+        </TextBlock>
+        
+        <TextBlock Grid.Row="2" Grid.Column="2" x:Name="CreditosLabel" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextWrapping="Wrap" TextAlignment="Right"  Style="{StaticResource Text1-1}">
+            Un producto de @charlerodriguez3
+        </TextBlock>
     </Grid>
 </Window>

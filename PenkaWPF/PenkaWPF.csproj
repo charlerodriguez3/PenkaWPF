@@ -8,4 +8,28 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\Images\Logo.png" />
+    <None Remove="Resources\Images\Logo2.png" />
+    <None Remove="Resources\Images\Logo3.png" />
+    <None Remove="Resources\Images\Logo4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Logo.png" />
+    <Resource Include="Resources\Images\Logo2.png" />
+    <Resource Include="Resources\Images\Logo3.png" />
+    <Resource Include="Resources\Images\Logo4.png" />
+  </ItemGroup>
+
 </Project>
